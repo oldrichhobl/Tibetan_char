@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill-opacity="1" color-rendering="auto" color-interpolation="auto" stroke="black" text-rendering="auto" stroke-linecap="square" stroke-miterlimit="10" stroke-opacity="1" shape-rendering="auto" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12" stroke-dashoffset="0" image-rendering="auto" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify" version="1.0" contentScriptType="text/ecmascript" contentStyleType="text/css" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+	<COMMENT>Unicode Character 'TIBETAN DIGIT EIGHT' (U+0F28)</COMMENT>
+	<defs id="genericDefs">
+	</defs>
+	<g transform="scale(0.3)">
+		<g>
+			<path d="M122.0625 377.4375 Q122.0625 380.5312 119.5312 382.5 Q110.25 370.6875 100.8281 360.4219 Q91.4062 350.1562 79.3125 342.7031 Q67.2188 335.25 51.4688 330.8906 Q35.7188 326.5312 14.0625 326.5312 Q11.25 326.5312 9.4219 326.8125 Q7.5938 327.0938 6.1875 327.6562 Q3.375 329.0625 1.4062 329.0625 Q1.9688 324.2812 6.4688 317.25 Q10.9688 310.2188 18.8438 299.5312 L52.0312 254.5312 Q53.7188 252 55.9688 249.1875 Q58.2188 246.375 60.3281 244.2656 Q62.4375 242.1562 64.2656 240.75 Q66.0938 239.3438 66.9375 239.3438 Q68.0625 239.3438 69.1875 240.1875 Q70.3125 241.0312 70.3125 242.1562 Q70.3125 247.2188 61.3125 259.3125 L61.3125 259.0312 L33.75 293.0625 Q33.75 296.1562 35.0156 298.125 Q36.2812 300.0938 37.9688 300.0938 Q50.9062 300.0938 65.8125 307.125 Q80.7188 314.1562 93.0938 325.2656 Q105.4688 336.375 113.7656 350.1562 Q122.0625 363.9375 122.0625 377.4375 ZM118.4062 383.3438 L119.5312 382.5 L120.6562 384.1875 L118.4062 383.3438 ZM1.125 329.0625 L1.4062 329.0625 L1.4062 329.3438 L1.125 329.0625 Z" stroke="none">
+			</path>
+		</g>
+	</g>
+</svg>

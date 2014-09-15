@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">  
+<link rel="stylesheet" type="text/css" href="animate.css" >
+<link href="my.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" charset="utf-8" src="appframework.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="filesmuj.js"></script>
+<script type="text/javascript" charset="utf-8" src="filesystem.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="DBapi.js"></script>
+
+<script type="text/javascript" language="javascript">
+//initial event handler to detect when intel is ready to roll
+    //document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+    isChrome = !!(window.chrome && chrome.webstore && chrome.webstore.install);
+    //setTimeout("onDeviceReady();", 2000);
+
+    
+//  When the program is ready
+    function ProgramReady() {
+        app.log("ProgramReady !! OKej ");
+        //hide splash screen now that our app is ready to run
+        setTimeout(function () {
+        $.ui.launch();
+        }, 250);
+        
+        // ****  ovladani tlacitek menu a back  ****
+        //document.addEventListener("menubutton", onMenuKeyDown, false );
+        document.addEventListener("backbutton", onBackKeyDown, false); 
+
+            
+         // stranka informacni
+         var element = document.getElementById('vercor');
+         if (!isChrome)element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                            'Device Cordova: '  + device.cordova  + '<br />' + 
+                            'Device Platform: ' + device.platform + '<br />' + 
+                            'Device UUID: '     + device.uuid     + '<br />' + 
+                            'Device Version: '  + device.version  + '<br />';
+                        
+         // **** otevreni SQL databaze  ****        
+         DBAPI.otevriDB(); 
+         //
+         // $.ui.popup('DB is OPEN');
+    
+        // vypln(1);    // ??? zacinat od prvniho slova ???
+        // zavolame si o prvni slovo a vysledek zobrazi funkce vypln
+        // DBAPI.dejNextSlovo(vypln);  
+
+    
+    
+    };
+
+   // Handle the back button    //
+   function onBackKeyDown() { 
+    $.ui.popup( {
+     title:"Ukončit ?",
+     message:"Ukončit program Šprt ? <br/>" + pathRootAdr,
+     cancelText:"Pokračovat",
+     cancelCallback: function(){console.log("cancelled");},
+     doneText:"KONEC!",
+     doneCallback: function(){navigator.app.exitApp();},
+     cancelOnly:false
+    });
+    return true;
+    }
+         
+    function nactiDataResetXX(path)
+    // nacte nova data a resetuje zobrazeni
+    {
+      nactiData(path);
+      DBAPI.dejNextSlovo(vypln);  
+      gotoPage("Zkouseni");
+      $.ui.setTitle(nazevLekce);
+      // 
+    }
+    
+    function nactiData(path)
+    {
+    pathRootAdr = path;       // zapamatujeme si odkud se nacitalo naposled
+    xmlData = null;           // mozna vymazat stara data
+    xmlData = loadXMLDoc(pathRootAdr + "lekcetest1.xml");
+    // xmlData = loadXMLbezErr("file:///android_asset/www/lekcetest1.xml");
+    $("#lastlekce").html(pathRootAdr + "lekcetest1.xml");
+    xslJednoSlovo = loadXMLDoc(pathRootAdr + "jednoslovo.xsl"); 
+    // alert("NACITANI " + pathRootAdr + "katvozlist.xml");
+    if((xmlData == null)||(xslJednoSlovo == null)){
+    $.ui.popup( {
+     title:"Bacha !",
+     message:"Nenačtena data z adresáře: <br/>" + pathRootAdr + "<br/>lekcetest1.xml . . . . ",
+     cancelText:"Konec",
+     cancelCallback: function(){console.log("cancelled");},
+     doneText:"OK!",
+     doneCallback: function(){console.log("Done for!");},
+     cancelOnly:false
+    });
+    }
+    // do nadpisu nazev lekce
+    nazevLekce = xmlData.getElementsByTagName("ORIGIN")[0].getElementsByTagName("SESTAVATX")[0].textContent;
+    // opravit aktualni status
+    aktStatus.Celkem = xmlData.getElementsByTagName("R").length;
+    aktStatus.Index = 1;
+    aktStatus.Znam = 0;
+    aktStatus.Neznam = 0;
+    
+    };
+    
+    function gotoPage(page)
+    {
+      window.location.href = "#"+page;
+    }
+    
+    
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    $.ui.autoLaunch  = false;
+    $.ui.useOSThemes = false; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && !$.os.ios && $("#afui").get(0).className !== "ios")
+            $("#afui").removeClass("ios");
+            
+            
+    }
+    );
+    
+
+$.ui.ready(
+    function(){
+    
+    $.ui.backButtonText='Zpět';
+    $.ui.showBackButton=true;
+    //  $.ui.updateBadge("#idtext","cs","tl");          //Badge will appear on the top left
+    $.ui.updateBadge("#znam","Znám","tl","green");      //Badge will appear on the top left
+    $.ui.updateBadge("#neznam","Neznám","tl","red");    //Badge will appear on the top left
+    $.ui.updateBadge("#celkem","Celkem","tl","black");  //Badge will appear on the top left
+
+    
+        // zobrazi panel historie pomoci pop
+           // alert("UIREADY");
+           // $.ui.loadContent("historie",false,false,"pop");     
+
+       document.addEventListener("unloadpanel", onUnloadpanel, false);           
+       document.addEventListener("loadpanel", onLoadpanel, false);
+       
+       
+       document.addEventListener("swipe", onSwipe, false);           
+       document.addEventListener("swipeUp", onSwipeup, false);           
+       document.addEventListener("swipeDown", onSwipedown, false);           
+       // document.addEventListener("tap", onTap  , false);    
+       
+       // $("#Zkouseni").on("tap","#slovo",onTap);
+       
+       $("#slovo").bind("click",onTap);
+       
+       
+     }
+);
+ 
+ //tap 		similar to click
+ //singleTap	tapped once
+ //doubleTap 	two quick taps
+ //longTap 	Long press tap
+ //swipe 	screen was swiped
+ //swipeLeft 	screen was swiped left
+ //swipeRight 	screen was swiped right
+ //swipeUp 	screen was swiped up
+ //swipeDown 	screen was swiped down
+
+ 
+// This event handler is fired when panel is loaded
+    function onUnloadpanel(e) {
+     app.log("onUnloadpanel: "+e.srcElement.id);
+     }
+    function onLoadpanel(e) {
+     app.log("onLoadpanel: "+e.srcElement.id);
+     if(e.srcElement.id === 'Zkouseni') $.ui.setTitle(nazevLekce);
+     }
+// This event 
+    function onSwipe(e) {
+     console.log("onSwipel: "+e.srcElement);
+    }
+    function onSwipeup(e) {
+     console.log("onSwipe UP: "+e.srcElement);
+     znam();
+    }
+    function onSwipedown(e) {
+     console.log("onSwipe Down: "+e.srcElement);
+     neznam();
+    }
+    function onTap(e) {
+     console.log("on Tap: "+e.srcElement+" id=" + e.srcElement.id+" type=" + e.type+" cX=" + e.clientX);
+     otoc();
+     return true;
+    }
+
+
+</script>
+
+  <script type="text/javascript">    
+//***********************************************************
+//
+//   aktualni stav zkouseni = status právě zkoušené lekce
+//
+  var aktStatus =
+  {
+    idLekce: 0,
+    odTime:0,
+    doTime:0,
+    lastIndex:0,
+    Index:0,
+    Znam:0,
+    Neznam:0,
+    Celkem:30,
+    pocetSlov:0
+    
+  	  
+  }
+
+    function flip()
+    {
+       // $.ui.loadContent("#page1",false,false,"pop");
+       $.ui.runTransition("up",slovo1,slovo,false);
+
+       // alert("flip " + $('#page1'));
+    }
+    
+    function anim1()
+    {
+       $("#slovo").addClass("animated flip");
+       // $("#slovo").removeClass("animated flip");
+       // $("#slovo").addClass("flip");
+       // alert("flip " + $('#page1'));
+    }
+    function odanim1()
+    {
+       $("#slovo").removeClass("animated");
+       $("#slovo").removeClass("flip");
+       // alert("flip " + $('#page1'));
+    }
+
+
+    function canim(blok,cssanim,cas)
+    {
+       $(blok).addClass(cssanim);      
+       var Timer = setInterval(function()
+       	      {
+       	         clearInterval(Timer);
+       	      	 Timer = null;
+       	      	 $(blok).removeClass(cssanim);
+       	      	 //$(blok).removeClass("flip");
+               }
+       	      ,cas);
+    }
+
+    
+    
+    function vypln(slovo)
+    // slovo je objekt obsahujici slova v obo jazycich
+    {
+      // alert("vypln " + slovo.slovo);
+
+      var s = '<div id="tabs-0" class="tab"> <div id="Word1"> ' +
+       slovo.slovo +
+       '</div> <div id="Word2"> '+
+       slovo.word.toString()+
+       '</div></div> ';
+ 
+  
+      $("#slovo").html(s);
+      $.ui.updateBadge("#slovo","cs","tl","green"); //Badge will appear on the top left
+      $("#Word1").show();
+      $("#Word2").hide();
+      // canim('#slovo','animated flipInX',1000);
+      showStatus(); 
+      }
+    
+    function showStatus()
+    {
+       $("#znamx").html(aktStatus.Znam); 
+       $("#neznamx").html(aktStatus.Neznam); 
+       $("#celkemx").html(aktStatus.Celkem); 
+    
+    }
+    function znam()
+    {
+    // zavola si o dalsi slovo a vysledek zobrazi funkce vypln
+      DBAPI.dejNextSlovo(vypln);  
+      aktStatus.Znam++;
+      aktStatus.Index++;
+      if(aktStatus.Index > aktStatus.Celkem) aktStatus.Index = 1;
+      showStatus();
+    }
+    function neznam()
+    {
+      DBAPI.dejNextSlovo(vypln);  
+      aktStatus.Neznam++;
+      aktStatus.Index++;
+      if(aktStatus.Index > aktStatus.Celkem) aktStatus.Index = 1;
+      showStatus();
+    }
+    function otoc()
+    {
+      // konvertXmlToTarget(xmlData,xslJednoSlovo,aktStatus.Index,"slovo");      
+      canim('#slovo','animated flip',1000);
+      $("#Word1").toggle();
+      $("#Word2").toggle();
+    }
+    
+
+   // action sheet =  volba na spodu obrazofky
+   function actionmy(){
+   $.ui.actionsheet("<a href='javascript:;' class='button'>N a s t a v e n í</a>"+ 
+                    "<a href='javascript:navigator.app.exitApp();' class='button red'> * K o n e c * </a>")
+   }
+    
+  </script>
+
+</head>
+
+<div id="afui" class="android">
+    <div id="header"></div>
+    
+    <div id="content" style="">
+
+   <!-- ************  P A N E L   Zkouseni *****************************   -->
+    <div class="panel bgzkousej" title="Zkoušení" id="Zkouseni" style="overflow:hidden" selected="selected">
+
+              <div id="myhead" class="myhead" >
+                <div class="block">
+                Block
+                </div>
+                <div id="idtext" class="text" >
+                   <div id="znam"   class="skore" >
+                     <span  id="znamx">0</span>
+                   </div>
+                   <div id="neznam" class="skore" >
+                     <span  id="neznamx">0</span>
+                   </div>
+                   <div id="celkem" class="skore" >
+                     <span  id="celkemx">0</span>
+                   </div>
+                </div>
+              </div>
+                       
+              <div id="slovo" class="slovo" >
+              
+              <hr/>
+              
+              <hr/>
+              </div>
+        
+              <hr/>
+        
+
+            <div class="tlacidla" >      
+                <a class="greatb bgsipup"   
+                          onclick="znam();">Znám !</a>
+                <a class="greatb bgsipdn"   
+                          onclick="neznam();">Neznám ?</a>
+            </div>
+            
+        </div>
+        
+        <!-- ************  P A N E L   Kviz *****************************   -->
+        <div class="panel bgkviz" title="Kvízz" data-nav="nav_0" id="Kviz" >
+        K v i z
+        
+        </div>
+        
+        
+        <!-- ************  P A N E L   historie *****************************   -->
+        <div class="panel" title="Historie učení" data-nav="nav_0" id="historie" data-appbuilder-object="page" data-transition="pop"
+        style="">
+        
+                   
+        <div id="idhis">Nevyplneno ??</div>
+        
+
+        </div>
+        
+        <!-- ************  P A N E L   Nastaveni *****************************   -->        
+        <div class="panel" title="Nastavení" data-nav="nav_0" id="nastav" 
+        style="">
+
+        <hr/>
+
+         <div class="button-grouped vertical">
+         
+        <a class="button  green big"   
+           onclick="javascript:DBAPI.nactiDataReset(path_android_asset);">Lekce z APK</a>
+        
+        <a class="button  green big"   
+           onclick="javascript:DBAPI.nactiDataReset(path_dramatik);">z www.dramatik.cz</a>
+        
+        <a class="button  green big"   
+           onclick="javascript:DBAPI.nactiDataReset(path_jarda);">z www.jarda.org</a>
+        
+        <a class="button  green big"   
+           onclick="javascript:DBAPI.nactiDataReset(path_extSdCard);">Lekce na extSdCard</a>
+        
+        <a class="button  green big"   
+           onclick="javascript:DBAPI.nactiDataReset(path_local);">Lekce z local store</a>
+         
+        </div>
+        <br/>
+
+        <a class="button  green big"   
+           onclick="javascript:$.ui.setTitle('ZMENA NADPISU');">Zmena nadpisu</a>
+                  
+
+                  <hr/>
+
+                  <hr/>
+                  <!-- <a class="button red" onclick="actionmy();">actionmy</a>   -->  
+                  <a href="#logpage"  class="button red">Log history</a>
+                   
+       <h1>Zařízení</h1>
+        <table>
+          <tr>
+           <td>Verze cordova : </td>
+           <td><span id="vercor">Device: N E U R Č E N O </span></td>
+          </tr>
+          <tr>
+           <td></td>
+           <td></td>
+          </tr>
+        </table>
+        <h1>Načtená lekce:</h1>
+        <div id="lastlekce">Zatím nenačtena??</div>
+        <a class="button slate"   
+           onclick="alert('isChrome = ' + isChrome);">Vypis isChroma</a>
+ 
+                  
+                  
+       </div>  <!-- konec panelu Nastaveni -->
+        
+        
+        
+        <!-- log panel -->
+        <div class="panel" title="Log panel" id="logpage" 
+         style="overflow:auto; height:750px;" 
+        data-nav="nav_0" data-footer="none"  >
+            <h1>Log </h1>
+ 		<ul id="logtxt" class="list" style="overflow:auto; height:750px;" 
+ 		    data-appbuilder-object="list" data-position="static" style="z-index: 0;">
+
+			     
+		</ul>    
+		</div>
+    
+    </div> <!-- konec Content -->
+ 
+    <div id="navbar">
+        <a href="#Zkouseni" class="icon home">Zkoušej</a><a href="#Kviz" class="icon picture">Kvíz</a>
+        <a href="#historie" class="icon info">Stat</a><a href="#nastav" class="icon settings">Nastav</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <a id="backButton" href="#" class="button back" style="visibility: visible; ">Zpět</a>
+        <h1 id="pageTitle" class="">Test</h1> 
+    </header>
+    <nav id="nav_0" data-appbuilder-object="nav">
+        <h1>Zkoušej</h1>
+    </nav>
+</div>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+          app.initialize();
+        </script>   
+</html>

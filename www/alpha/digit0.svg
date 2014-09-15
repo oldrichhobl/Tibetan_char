@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill-opacity="1" color-rendering="auto" color-interpolation="auto" stroke="black" text-rendering="auto" stroke-linecap="square" stroke-miterlimit="10" stroke-opacity="1" shape-rendering="auto" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12" stroke-dashoffset="0" image-rendering="auto" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify" version="1.0" contentScriptType="text/ecmascript" contentStyleType="text/css" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+	<COMMENT>Unicode Character 'TIBETAN DIGIT ZERO' (U+0F20)</COMMENT>
+	<defs id="genericDefs">
+	</defs>
+	<g transform="scale(0.3)">
+		<g>
+			<path d="M73.4062 369.2812 Q64.125 369.2812 53.2969 363.2344 Q42.4688 357.1875 33.0469 347.9062 Q23.625 338.625 17.4375 327.6562 Q11.25 316.6875 11.25 306.8438 Q11.25 305.1562 11.6719 299.9531 Q12.0938 294.75 14.0625 288.2812 Q16.0312 281.8125 19.6875 274.6406 Q23.3438 267.4688 29.8125 261.5625 Q36.2812 255.6562 45.9844 251.8594 Q55.6875 248.0625 69.4688 248.0625 Q76.2188 248.0625 85.5 252.2812 Q94.7812 256.5 103.3594 263.6719 Q111.9375 270.8438 117.8438 280.6875 Q123.75 290.5312 123.75 301.5 Q123.75 312.4688 120.2344 324.5625 Q116.7188 336.6562 110.1094 346.5 Q103.5 356.3438 94.2188 362.8125 Q84.9375 369.2812 73.4062 369.2812 ZM108 315.2812 Q108 309.6562 105.4688 302.4844 Q102.9375 295.3125 97.3125 288.9844 Q91.6875 282.6562 82.6875 278.2969 Q73.6875 273.9375 60.75 273.9375 Q55.9688 273.9375 52.7344 275.9062 Q49.5 277.875 47.5312 280.8281 Q45.5625 283.7812 44.5781 287.4375 Q43.5938 291.0938 43.5938 294.4688 Q43.5938 305.4375 47.6719 314.2969 Q51.75 323.1562 58.2188 329.3438 Q64.6875 335.5312 72.9844 338.9062 Q81.2812 342.2812 89.7188 342.2812 Q93.375 342.2812 96.6094 339.75 Q99.8438 337.2188 102.375 333.2812 Q104.9062 329.3438 106.4531 324.5625 Q108 319.7812 108 315.2812 Z" stroke="none">
+			</path>
+		</g>
+	</g>
+</svg>

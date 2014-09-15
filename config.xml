@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.hk.tibetan" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Tibetan</name>
+    <description>
+        Tibetan alphabet  testing.
+    </description>
+    <author email="tibetan@dramatik.cz" href="http://dramatik.cz">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    
+   <icon src="res/icon.png" />
+   <preference name="SplashScreen" value="screen" />
+   <preference name="SplashScreenDelay" value="4000" />
+   <preference name="LoadingDialog" value="TIBETSKA ABECEDA ,Hledám nové lekce"/>
+
+    
+</widget>

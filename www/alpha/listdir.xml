@@ -2,11 +2,423 @@
 <?xml-stylesheet type="text/xsl" href="listdir.xsl" ?>
 <SHOWX>
 	<INFO>
-		<SUBJECT>Empty </SUBJECT><AUTHOR>O.Hobl </AUTHOR><EMAIL>hobl@hoblapech.cz  </EMAIL>
+		<SUBJECT>Empty </SUBJECT>
+		<AUTHOR>O.Hobl </AUTHOR>
+		<EMAIL>hobl@hoblapech.cz  </EMAIL>
 		<VERSION>2.00  </VERSION>
 	</INFO>
 	<ORIGIN>
-		<DATE>Thu Jun 26 18:29:51 UTC+0200 2014</DATE><SESTAVAN typses="unknown">1 </SESTAVAN>
+		<DATE>Thu Jun 26 18:29:51 UTC+0200 2014</DATE>
+		<SESTAVAN typses="unknown">1 </SESTAVAN>
 		<SESTAVATX>Seznam souborù</SESTAVATX>
-		<ADDRESS>C:\_VYVOJ\VYVOJ-SVG\TIBETAN</ADDRESS></ORIGIN>
-	<FILES><FILE><FNAME>digit0.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT ZERO' (U+0F20)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit1.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT ONE' (U+0F21)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit2.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT TWO' (U+0F22)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit3.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT THREE' (U+0F23)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit4.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT FOUR' (U+0F24)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit5.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT FIVE' (U+0F25)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit6.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT SIX' (U+0F26)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit7.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT SEVEN' (U+0F27)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit8.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT EIGHT' (U+0F28)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>digit9.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN DIGIT NINE' (U+0F29)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_a (1).svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER -A' (U+0F60)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_a (2).svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER A' (U+0F68)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_a.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER A' (U+0F68)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ba.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER BA' (U+0F56)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_bha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER BHA' (U+0F57)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ca.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER CA' (U+0F45)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_cha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER CHA' (U+0F46)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_da.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER DA' (U+0F51)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_dda.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER DDA' (U+0F4C)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ddha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER DDHA' (U+0F4D)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_dha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER DHA' (U+0F52)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_dza.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER DZA' (U+0F5B)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_dzha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER DZHA' (U+0F5C)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_fixedform_ra.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER FIXED-FORM RA' (U+0F6A)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ga.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER GA' (U+0F42)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_gha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER GHA' (U+0F43)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER HA' (U+0F67)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ja.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER JA' (U+0F47)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ka.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER KA' (U+0F40)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_kha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER KHA' (U+0F41)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_kssa.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER KSSA' (U+0F69)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_la.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER LA' (U+0F63)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ma.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER MA' (U+0F58)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_na.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER NA' (U+0F53)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_nga.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER NGA' (U+0F44)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_nna.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER NNA' (U+0F4E)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_nya.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER NYA' (U+0F49)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_pa.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER PA' (U+0F54)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_pha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER PHA' (U+0F55)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ra.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER RA' (U+0F62)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_sa.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER SA' (U+0F66)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_sha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER SHA' (U+0F64)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ssa.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER SSA' (U+0F65)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ta.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER TA' (U+0F4F)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_tha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER THA' (U+0F50)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_tsa.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER TSA' (U+0F59)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_tsha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER TSHA' (U+0F5A)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_tta.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER TTA' (U+0F4A)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ttha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER TTHA' (U+0F4B)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_wa.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER WA' (U+0F5D)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_ya.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER YA' (U+0F61)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_za.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER ZA' (U+0F5F)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_letter_zha.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN LETTER ZHA' (U+0F5E)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_mark_gter_yig_mgo_truncated_a.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN MARK GTER YIG MGO TRUNCATED A' (U+0F01)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_mark_paluta.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN MARK PALUTA' (U+0F85)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_syllable_om.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN SYLLABLE OM' (U+0F00)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_vowel_sign_o.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN VOWEL SIGN O' (U+0F7C)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE><FILE><FNAME>tibetan_vowel_sign_oo.svg</FNAME><DATE>99/01/01</DATE><SESTAVAN>Unicode Character 'TIBETAN VOWEL SIGN OO' (U+0F7D)</SESTAVAN><SESTAVATX>sestavatx</SESTAVATX><DEFFILE>deffile</DEFFILE></FILE></FILES></SHOWX>
+		<ADDRESS>C:\_VYVOJ\VYVOJ-SVG\TIBETAN</ADDRESS>
+	</ORIGIN>
+	<FILES>
+		<FILE>
+			<FNAME>digit0.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT ZERO' (U+0F20)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit1.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT ONE' (U+0F21)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit2.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT TWO' (U+0F22)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit3.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT THREE' (U+0F23)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit4.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT FOUR' (U+0F24)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit5.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT FIVE' (U+0F25)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit6.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT SIX' (U+0F26)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit7.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT SEVEN' (U+0F27)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit8.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT EIGHT' (U+0F28)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>digit9.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN DIGIT NINE' (U+0F29)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_a (1).svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER -A' (U+0F60)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_a (2).svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER A' (U+0F68)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_a.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER A' (U+0F68)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ba.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER BA' (U+0F56)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_bha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER BHA' (U+0F57)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ca.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER CA' (U+0F45)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_cha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER CHA' (U+0F46)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_da.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER DA' (U+0F51)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_dda.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER DDA' (U+0F4C)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ddha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER DDHA' (U+0F4D)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_dha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER DHA' (U+0F52)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_dza.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER DZA' (U+0F5B)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_dzha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER DZHA' (U+0F5C)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_fixedform_ra.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER FIXED-FORM RA' (U+0F6A)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ga.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER GA' (U+0F42)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_gha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER GHA' (U+0F43)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER HA' (U+0F67)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ja.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER JA' (U+0F47)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ka.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER KA' (U+0F40)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_kha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER KHA' (U+0F41)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_kssa.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER KSSA' (U+0F69)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_la.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER LA' (U+0F63)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ma.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER MA' (U+0F58)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_na.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER NA' (U+0F53)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_nga.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER NGA' (U+0F44)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_nna.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER NNA' (U+0F4E)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_nya.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER NYA' (U+0F49)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_pa.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER PA' (U+0F54)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_pha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER PHA' (U+0F55)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ra.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER RA' (U+0F62)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_sa.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER SA' (U+0F66)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_sha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER SHA' (U+0F64)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ssa.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER SSA' (U+0F65)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ta.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER TA' (U+0F4F)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_tha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER THA' (U+0F50)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_tsa.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER TSA' (U+0F59)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_tsha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER TSHA' (U+0F5A)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_tta.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER TTA' (U+0F4A)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ttha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER TTHA' (U+0F4B)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_wa.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER WA' (U+0F5D)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_ya.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER YA' (U+0F61)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_za.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER ZA' (U+0F5F)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_letter_zha.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN LETTER ZHA' (U+0F5E)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_mark_gter_yig_mgo_truncated_a.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN MARK GTER YIG MGO TRUNCATED A' (U+0F01)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_mark_paluta.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN MARK PALUTA' (U+0F85)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_syllable_om.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN SYLLABLE OM' (U+0F00)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_vowel_sign_o.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN VOWEL SIGN O' (U+0F7C)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+		<FILE>
+			<FNAME>tibetan_vowel_sign_oo.svg</FNAME>
+			<DATE>99/01/01</DATE>
+			<SESTAVAN>Unicode Character 'TIBETAN VOWEL SIGN OO' (U+0F7D)</SESTAVAN>
+			<SESTAVATX>sestavatx</SESTAVATX>
+			<DEFFILE>deffile</DEFFILE>
+		</FILE>
+	</FILES>
+</SHOWX>

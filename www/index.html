@@ -16,7 +16,6 @@
 <script type="text/javascript" charset="utf-8" src="filesmuj.js"></script>
 <script type="text/javascript" charset="utf-8" src="filesystem.js"></script>
 
-<script type="text/javascript" charset="utf-8" src="DBapi.js"></script>
 
 <script type="text/javascript" language="javascript">
 //initial event handler to detect when intel is ready to roll
@@ -27,7 +26,7 @@
     
 //  When the program is ready
     function ProgramReady() {
-        app.log("ProgramReady !! OKej ");
+        console.log("ProgramReady !! OKej ");
         //hide splash screen now that our app is ready to run
         setTimeout(function () {
         $.ui.launch();
@@ -37,33 +36,13 @@
         //document.addEventListener("menubutton", onMenuKeyDown, false );
         document.addEventListener("backbutton", onBackKeyDown, false); 
 
-            
-         // stranka informacni
-         var element = document.getElementById('vercor');
-         if (!isChrome)element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                            'Device Cordova: '  + device.cordova  + '<br />' + 
-                            'Device Platform: ' + device.platform + '<br />' + 
-                            'Device UUID: '     + device.uuid     + '<br />' + 
-                            'Device Version: '  + device.version  + '<br />';
-                        
-         // **** otevreni SQL databaze  ****        
-         DBAPI.otevriDB(); 
-         //
-         // $.ui.popup('DB is OPEN');
-    
-        // vypln(1);    // ??? zacinat od prvniho slova ???
-        // zavolame si o prvni slovo a vysledek zobrazi funkce vypln
-        // DBAPI.dejNextSlovo(vypln);  
-
-    
-    
-    };
+     };
 
    // Handle the back button    //
    function onBackKeyDown() { 
     $.ui.popup( {
      title:"Ukončit ?",
-     message:"Ukončit program Šprt ? <br/>" + pathRootAdr,
+     message:"Ukončit program Tibetian ? <br/>" + pathRootAdr,
      cancelText:"Pokračovat",
      cancelCallback: function(){console.log("cancelled");},
      doneText:"KONEC!",
@@ -73,16 +52,6 @@
     return true;
     }
          
-    function nactiDataResetXX(path)
-    // nacte nova data a resetuje zobrazeni
-    {
-      nactiData(path);
-      DBAPI.dejNextSlovo(vypln);  
-      gotoPage("Zkouseni");
-      $.ui.setTitle(nazevLekce);
-      // 
-    }
-    
     function nactiData(path)
     {
     pathRootAdr = path;       // zapamatujeme si odkud se nacitalo naposled
@@ -145,9 +114,9 @@ $.ui.ready(
     $.ui.updateBadge("#celkem","Celkem","tl","black");  //Badge will appear on the top left
 
     
-        // zobrazi panel historie pomoci pop
+           // zobrazi panel historie pomoci pop
            // alert("UIREADY");
-           // $.ui.loadContent("historie",false,false,"pop");     
+           // $.ui.loadContent("Historie",false,false,"pop");     
 
        document.addEventListener("unloadpanel", onUnloadpanel, false);           
        document.addEventListener("loadpanel", onLoadpanel, false);
@@ -284,30 +253,6 @@ $.ui.ready(
       showStatus(); 
       }
     
-    function showStatus()
-    {
-       $("#znamx").html(aktStatus.Znam); 
-       $("#neznamx").html(aktStatus.Neznam); 
-       $("#celkemx").html(aktStatus.Celkem); 
-    
-    }
-    function znam()
-    {
-    // zavola si o dalsi slovo a vysledek zobrazi funkce vypln
-      DBAPI.dejNextSlovo(vypln);  
-      aktStatus.Znam++;
-      aktStatus.Index++;
-      if(aktStatus.Index > aktStatus.Celkem) aktStatus.Index = 1;
-      showStatus();
-    }
-    function neznam()
-    {
-      DBAPI.dejNextSlovo(vypln);  
-      aktStatus.Neznam++;
-      aktStatus.Index++;
-      if(aktStatus.Index > aktStatus.Celkem) aktStatus.Index = 1;
-      showStatus();
-    }
     function otoc()
     {
       // konvertXmlToTarget(xmlData,xslJednoSlovo,aktStatus.Index,"slovo");      
@@ -333,12 +278,9 @@ $.ui.ready(
     <div id="content" style="">
 
    <!-- ************  P A N E L   Zkouseni *****************************   -->
-    <div class="panel bgzkousej" title="Zkoušení" id="Zkouseni" style="overflow:hidden" selected="selected">
-
+    <div class="panel bgzkousej" title="Learning" id="Zkouseni" style="overflow:hidden" selected="selected">
               <div id="myhead" class="myhead" >
-                <div class="block">
-                Block
-                </div>
+
                 <div id="idtext" class="text" >
                    <div id="znam"   class="skore" >
                      <span  id="znamx">0</span>
@@ -350,12 +292,17 @@ $.ui.ready(
                      <span  id="celkemx">0</span>
                    </div>
                 </div>
+                
+                <div id="mysipka" class="mysipka" >
+                  &nbsp;mysipka
+                </div>
+
               </div>
                        
               <div id="slovo" class="slovo" >
               
               <hr/>
-              
+              SLOVO
               <hr/>
               </div>
         
@@ -372,23 +319,319 @@ $.ui.ready(
         </div>
         
         <!-- ************  P A N E L   Kviz *****************************   -->
-        <div class="panel bgkviz" title="Kvízz" data-nav="nav_0" id="Kviz" >
+        <div class="panel bgkviz" title="Kvíz" data-nav="nav_0" id="Kviz" >
         K v i z
         
         </div>
         
+        <!-- ************  P A N E L   Znak *****************************   -->
+        <div class="panel" title="Znak" data-nav="nav_0" id="Znak" style="background:yellow;" >
+        ************ Z N A K   ********
+        <img id="znakImg" width="250px" src="alpha/test.svg" alt="src digit9 nenalezen" style="background:gray;" />
+        ************ za obrazkem ***************
+        <img id="znakImg2" width="200px" src="alpha/test.svg" alt="src digit9 nenalezen" style="background:gray;" />
+        ************ za obrazkem ***************
+        <img id="znakImg3" width="150px" src="alpha/test.svg" alt="src digit9 nenalezen" style="background:gray;" />
+        ************ za obrazkem ***************
+        <img id="znakImg4" width="100px" src="alpha/test.svg" alt="src digit9 nenalezen" style="background:gray;" />
+        ************ za obrazkem ***************
+ 
+        <img id="znakImg" width="250px" src="alpha/test.svg" alt="src test.svg nenalezen" style="background:gray;" />
+        ************ za obrazkem ***************
+ 
         
-        <!-- ************  P A N E L   historie *****************************   -->
-        <div class="panel" title="Historie učení" data-nav="nav_0" id="historie" data-appbuilder-object="page" data-transition="pop"
-        style="">
-        
-                   
-        <div id="idhis">Nevyplneno ??</div>
-        
+        <!-- PANEL   md1 -->
+<svg id="mandala"
+width="400px" height="400px" version="1.1"
+viewBox="0 0 1100 1100" 
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"> 
 
+<defs>
+ <circle id="Circ1" cx="500" cy="500" r="500" stroke="black" stroke-width="3" fill="blue" />
+ <circle id="Circ2" cx="500" cy="500" r="490" stroke="black" stroke-width="2"  fill="#99ff99" />
+ <circle id="Circ3" cx="500" cy="500" r="412" stroke="green" stroke-width="3"  fill="yellow" />
+ <circle id="Circ4" cx="500" cy="500" r="350"  stroke="black" stroke-width="2"  fill="#8389f5" />
+ <circle id="Circ5" cx="500" cy="500" r="311"  stroke="black" stroke-width="3"  fill="#9bc899" />
+ <circle id="Circ6" cx="500" cy="500" r="270"  stroke="black" stroke-width="2"  fill="#ff9999" />
+ <circle id="Circ7" cx="500" cy="500" r="230"  stroke="black" stroke-width="2"  fill="yellow" />
+ <circle id="Circ8" cx="500" cy="500" r="190"  stroke="black" stroke-width="2"  fill="white" />
+
+ <circle id="Circ9" cx="500" cy="500" r="150"  stroke="black" stroke-width="2"  fill="blue" />
+ <circle id="Circ10" cx="500" cy="500" r="110"  stroke="black" stroke-width="2"  fill="#9bc899" />
+ <circle id="Circ11" cx="500" cy="500" r="42"  stroke="black" stroke-width="2"  fill="white" />
+
+ <circle id="CircCenter" cx="500" cy="500" r="5"  stroke="black" stroke-width="4"  fill="white" />
+
+ <polygon id="bt" points="500, 10 325, 200 675, 200"
+ style="fill:#FFFFFF; stroke:#000000;stroke-width:3"/> 
+ <polygon id="ct" points="10, 500 110, 375 110, 625"
+ style="fill:#ff9999; stroke:#000000;stroke-width:3"/> 
+ 
+
+ <path id="stopa1"  transform = "scale(3 3) "
+       style="fill:red;stroke:green;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0, 0 c 2.8289,-4.466373 7.789289,-19.808255 14.222847,-12.242527
+       3.549496,4.174132 -4.910865,7.691042 -6.397775,8.355866 -2.059226,0.920716 -1.901126,5.16011
+       -3.938411,6.178753 -1.811479,0.905739 -4.552004,0.03661 -3.886661,-2.292092 z"
+        />
+ 
+</defs>
+<defs>
+ <radialGradient id="gradient_3D" cx="20%" cy="20%" r="100%" fx="30%" fy="30%">
+   <stop stop-color="white" offset="0"/>
+   <stop stop-color="#666" offset="50%"/>
+   <stop stop-color="black" offset="100%"/>
+ </radialGradient>
+ <radialGradient id="gradient_3D_red" cx="20%" cy="20%" r="100%" fx="30%" fy="30%">
+   <stop stop-color="white" offset="0"/>
+   <stop stop-color="red" offset="25%"/>
+   <stop stop-color="rgb(192,0,0)" offset="50%"/>
+   <stop stop-color="rgb(127,0,0)" offset="70%"/>
+   <stop stop-color="rgb(64,0,0)" offset="85%"/>
+   <stop stop-color="rgb(0,0,0)" offset="100%"/>
+ </radialGradient>
+</defs>
+
+
+
+<g id="manda" >
+
+<use xlink:href="#Circ1" /> 
+<use xlink:href="#Circ2" /> 
+
+<use xlink:href="#ct" /> 
+<use xlink:href="#ct" transform = "rotate(60 500 500)"/> 
+<use xlink:href="#ct" transform = "rotate(120 500 500)"/> 
+<use xlink:href="#ct" transform = "rotate(180 500 500)"/> 
+<use xlink:href="#ct" transform = "rotate(240 500 500)"/> 
+<use xlink:href="#ct" transform = "rotate(300 500 500)"/> 
+
+
+<use xlink:href="#Circ3" /> 
+
+<use xlink:href="#bt" /> 
+<use xlink:href="#bt" transform = "rotate(60 500 500)"/> 
+<use xlink:href="#bt" transform = "rotate(120 500 500)"/> 
+<use xlink:href="#bt" transform = "rotate(180 500 500)"/> 
+<use xlink:href="#bt" transform = "rotate(240 500 500)"/> 
+<use xlink:href="#bt" transform = "rotate(300 500 500)"/> 
+
+
+
+
+<use xlink:href="#Circ4" /> 
+<use xlink:href="#Circ5" /> 
+<use xlink:href="#Circ6" /> 
+<use xlink:href="#Circ7" /> 
+<use xlink:href="#Circ8" /> 
+
+<use xlink:href="#Circ9" /> 
+
+
+     <g fill="none" stroke="#808080" stroke-width="2">
+         <line x1="0" y1="500"   x2="1000"   y2="500" />
+         <line x1="500" y1="0"   x2="500"   y2="1000" />
+         
+         <line x1="0" y1="500"   x2="1000"   y2="500" transform = "rotate(30 500 500)"/>
+         <line x1="0" y1="500"   x2="1000"   y2="500" transform = "rotate(-30 500 500)"/>
+         <line x1="0" y1="500"   x2="1000"   y2="500" transform = "rotate(60 500 500)"/>
+         <line x1="0" y1="500"   x2="1000"   y2="500" transform = "rotate(-60 500 500)"/>
+
+     </g>
+
+<use xlink:href="#Circ10" /> <!-- zelena -->
+
+
+
+     <g fill="red" stroke="black" stroke-width="2">
+         <line x1="500" y1="390"   x2="405"   y2="555" />
+         <line x1="500" y1="390"   x2="405"   y2="555"  transform = "rotate(60 500 500)"/>
+         <line x1="500" y1="390"   x2="405"   y2="555"  transform = "rotate(-60 500 500)"/>
+         <line x1="500" y1="390"   x2="405"   y2="555"  transform = "rotate(120 500 500)"/>
+         <line x1="500" y1="390"   x2="405"   y2="555"  transform = "rotate(-120 500 500)"/>
+         <line x1="500" y1="390"   x2="405"   y2="555"  transform = "rotate(180 500 500)"/>
+
+     </g>
+
+
+     <use xlink:href="#Circ11" /> 
+     <use xlink:href="#CircCenter" />
+     
+     <use id="g1" transform="translate(100 100)" xlink:href="#stopa1" />
+     <use id="g2" transform="translate(150 150)" xlink:href="#stopa1" />
+     <use id="g3" transform="translate(250 200)" xlink:href="#stopa1" />
+     <use id="g4" transform="translate(300 300)" xlink:href="#stopa1" />
+     
+     <!-- rastr pomocny -->
+     <g fill="red" stroke="white" stroke-width="5">
+       <line x1="100" y1="100"   x2="100"   y2="900" />
+       <line x1="100" y1="100"   x2="900"   y2="100" />
+       <line x1="900" y1="100"   x2="900"   y2="900" />
+       <line x1="100" y1="900"   x2="900"   y2="900" />
+     </g>
+     <g fill="red" stroke="yellow" stroke-width="5">
+       <line x1="0" y1="0"   x2="1000"   y2="1000" />
+       <line x1="0" y1="0"   x2="1000"   y2="0" />
+       <line x1="1000" y1="0"   x2="1000"   y2="1000" />
+       <line x1="0" y1="1000"   x2="1000"   y2="1000" />
+     </g>
+</g>
+
+<!-- use xlink:href="#levelCirc"  
+	fill="url(#gradient_3D_red)" / --> 
+
+</svg>
+        
+        
+        
+        
         </div>
         
-        <!-- ************  P A N E L   Nastaveni *****************************   -->        
+
+
+
+        <!-- ************  P A N E L   historie *****************************   -->
+        <div class="panel" title="Výběr lekce" data-nav="nav_0" id="Historie" 
+        data-appbuilder-object="page" data-transition="pop"
+        style="">
+        
+		<!-- <a class="button" href="#" style="" data-appbuilder-object="button" data-position="static">Hello World</a>   -->
+		<div class="select_element form_element" style="width: 100%; overflow: hidden;" data-appbuilder-object="select" data-position="static">
+			<label for="selectServer">Server</label>
+			<select id="selectServer" onchange="zmenaServeru(this)">
+				<option value="" selected="">
+					Zvolte server !
+				</option>
+				<option value="alpha/listdir.xml">
+					Local file
+				</option>
+				<option value="http://opesol.org/wwwSPRT/DATA/DB/BIN/sprt.php">
+					Opesol
+				</option>
+				<option value="http://www.dramatik.cz/Tibetian/">
+					Dramatik
+				</option>
+			</select>
+
+			<div id="seznamLekci">
+			  
+			</div>
+			
+		</div>
+                   
+        <div id="idhis">Nevyplneno ??</div>
+        </div>
+        
+  <script type="text/javascript">
+  function zmenaServeru(pol)
+  {
+    // alert("Zmena serveru " + pol.value);
+    
+    
+   nactiSeznam(pol.value);
+    
+    
+  }
+
+  function nactiSeznam(pol)
+  {
+    // alert("Nacti seznam " + pol );
+    
+    var data = loadXMLDoc(pol); 
+    console.log("DATA = " + data);
+    console.dir(data);
+    // console.dir("queryCommandEnabled = " + data.queryCommandEnabled());
+    if(data === null) 
+    {
+    $.ui.popup( {
+     title:"Bacha !",
+     message:"Server neposkytuje abecedu: <br/>" + pol + "<br/>",
+     cancelText:"Konec",
+     cancelCallback: function(){console.log("cancelled");},
+     doneText:"OK!",
+     doneCallback: function(){
+        console.log("Done for!");
+                             },
+     cancelOnly:false
+    });
+     return;
+    }
+    var  lekce = data.getElementsByTagName("FILE");
+    if(lekce === null) 
+    {
+    $.ui.popup( {
+     title:"Bacha !",
+     message:"Server neposkytuje abecedu: <br/>" + pol + "<br/>",
+     cancelText:"Konec",
+     cancelCallback: function(){console.log("cancelled");},
+     doneText:"OK!",
+     doneCallback: function(){console.log("Done for!");},
+     cancelOnly:false
+    });
+     return;
+    }
+    // alert("pocet lekci : " + lekce.length);
+    var path = 'alpha/';    // ??? cestana adresar - v xml jsou jen nazvy souboru
+    var s = '<ul  class="list"> ';
+    for (i=0;i<lekce.length;i++)
+      { 
+         var e = lekce[i];
+         var onclick = 'onclick="javascript:ukazZnak(' + "'" + path + 
+             e.getElementsByTagName("FNAME")[0].textContent  + "');" +'"';
+         
+         s = s + '<li ' + onclick + '>'+ e.getElementsByTagName("FNAME")[0].textContent+
+         ' (' + e.getElementsByTagName("SESTAVAN")[0].textContent+ ')'+
+         '</li>';
+      }
+    s =    s + '</ul>';
+    // alert(' sesnam ' +  s);
+    $.ui.setTitle(pol.value);
+    $("#seznamLekci").html(s);
+    
+           
+  }
+  
+  
+  
+  function ukazZnak(url)
+  {
+    alert("Ukaz znak : " + url);
+    var svg = loadXMLDoc(url);
+    
+    console.dir(svg);
+
+    
+    
+    $.ui.popup( {
+     title:"Ukaz znak ",
+     message:svg,
+     cancelText:"Ne",
+     cancelCallback: function(){console.log("cancelled");},
+     doneText:"OK!",
+     doneCallback: function(){
+        console.log("Done for!");
+        $.ui.setTitle("NACITAM " + url);
+        // zobrazime novy znak
+        // $.ui.updatePanel("#Znak",svg);
+        
+        
+        // $(svg).appendTo("#znakDiv");  takhle to nejde 
+        // $(svg).appendTo("#Znak");
+        
+        $("#znakImg").attr("src",url);
+        
+        $.ui.showModal("#Znak","fade");
+          
+        },
+     cancelOnly:false
+    });
+  }
+  
+  </script>      
+        
+        
+ <!-- ************  P A N E L   Nastaveni *****************************   -->        
         <div class="panel" title="Nastavení" data-nav="nav_0" id="nastav" 
         style="">
 
@@ -396,20 +639,7 @@ $.ui.ready(
 
          <div class="button-grouped vertical">
          
-        <a class="button  green big"   
-           onclick="javascript:DBAPI.nactiDataReset(path_android_asset);">Lekce z APK</a>
-        
-        <a class="button  green big"   
-           onclick="javascript:DBAPI.nactiDataReset(path_dramatik);">z www.dramatik.cz</a>
-        
-        <a class="button  green big"   
-           onclick="javascript:DBAPI.nactiDataReset(path_jarda);">z www.jarda.org</a>
-        
-        <a class="button  green big"   
-           onclick="javascript:DBAPI.nactiDataReset(path_extSdCard);">Lekce na extSdCard</a>
-        
-        <a class="button  green big"   
-           onclick="javascript:DBAPI.nactiDataReset(path_local);">Lekce z local store</a>
+BUTTONS
          
         </div>
         <br/>
@@ -461,16 +691,28 @@ $.ui.ready(
     </div> <!-- konec Content -->
  
     <div id="navbar">
-        <a href="#Zkouseni" class="icon home">Zkoušej</a><a href="#Kviz" class="icon picture">Kvíz</a>
-        <a href="#historie" class="icon info">Stat</a><a href="#nastav" class="icon settings">Nastav</a>
+        <a href="#Zkouseni" class="icon home">Zkoušej</a>
+        <a href="#Kviz" class="icon picture">Kvíz</a>
+        <a href="#Historie" class="icon info">Stat</a>
+        <a href="#nastav" class="icon settings">Nastav</a>
     </div>
+    
     <header id="header_0" data-appbuilder-object="header">
         <a id="backButton" href="#" class="button back" style="visibility: visible; ">Zpět</a>
         <h1 id="pageTitle" class="">Test</h1> 
     </header>
-    <nav id="nav_0" data-appbuilder-object="nav">
-        <h1>Zkoušej</h1>
-    </nav>
+    
+    <nav id="nav_0" >
+      <h1>Tibetian characters</h1>
+       <ul class="list">
+        <li><a href="#Zkouseni" class="icon home">Zkoušení</a></li>
+        <li><a href="#Kviz" class="icon picture">Kvíz</a></li>
+        <li><a href="#Historie" class="icon info">Výběr lekce</a></li>
+        <li><a href="#nastav" class="icon settings">Setup</a></li>
+        <li><a href="#Znak" class="icon settings">Znak</a></li>
+        </ul>
+    </nav>    
+    
 </div>
 
 

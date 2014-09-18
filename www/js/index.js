@@ -26,13 +26,13 @@ var app = {
         var ele = document.getElementById(id);
         $("#messagestxt").html('Received Event 1 ');
         console.log('Received Event: ' + id);
-        var s = 'Device Name: '     + device.name     + '<br />' +
+        var s = 
                             'Device Cordova: '  + device.cordova  + '<br />' +
                             'Device Platform: ' + device.platform + '<br />' +
                             'Device UUID: '     + device.uuid     + '<br />' +
                             'Device Model: '    + device.model    + '<br />' +
                             'Device Version: '  + device.version  + '<br />';
-         $("#statustxt").html(s);
+         $("#vercor").html(s);
          
          //*** inicializace fileSystemu
          initFileSystem();        
